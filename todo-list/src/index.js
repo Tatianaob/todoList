@@ -10,3 +10,5 @@ root.render(
   </React.StrictMode>
 );
 
+// StricMode helps you write better code. it is always checking 
+// 

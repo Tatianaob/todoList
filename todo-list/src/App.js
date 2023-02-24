@@ -1,10 +1,12 @@
 import './App.css';
 import { useState } from "react";
 import {Task} from "./Task";
+import {Text} from "./Text";
 
 function App() {
   const [todoList, setTodoList] = useState([]);
   const [newTask, setNewTask] = useState("");
+  const [showText, setShowText] = useState(false);
 
   const handleChange = (event) => {
     setNewTask(event.target.value);
@@ -35,6 +37,7 @@ function App() {
     );
   };
 
+
   return (
     <div className="App">
 
@@ -55,6 +58,12 @@ function App() {
           );
         })} 
       </div>
+      <button onClick={() => {
+        setShowText(!showText);
+      }}> Show Text
+
+      </button>
+      {showText && <Text/>}
 
     </div>
   );
